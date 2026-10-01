@@ -1,0 +1,71 @@
+{
+  "name": "@openmycel/expo-rich-text",
+  "version": "0.1.5",
+  "description": "WYSIWYG markdown editor for Expo and React Native, built on Tiptap inside a WebView.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
+  "files": [
+    "build",
+    "src",
+    "THIRD-PARTY-LICENSES.md"
+  ],
+  "scripts": {
+    "build:web": "node scripts/build-web.mjs && node scripts/third-party-licenses.mjs",
+    "build": "npm run build:web && tsc",
+    "typecheck": "npm run build:web && tsc --noEmit && tsc --noEmit -p web/tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "editor",
+    "markdown",
+    "wysiwyg",
+    "tiptap"
+  ],
+  "repository": "https://github.com/openmycel/expo-rich-text",
+  "author": "The OpenMycel Authors",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-webview": ">=13"
+  },
+  "devDependencies": {
+    "@tiptap/core": "3.31.4",
+    "@tiptap/extension-bold": "3.31.4",
+    "@tiptap/extension-code-block": "3.31.4",
+    "@tiptap/extension-document": "3.31.4",
+    "@tiptap/extension-hard-break": "3.31.4",
+    "@tiptap/extension-heading": "3.31.4",
+    "@tiptap/extension-italic": "3.31.4",
+    "@tiptap/extension-link": "3.31.4",
+    "@tiptap/extension-list": "3.31.4",
+    "@tiptap/extension-paragraph": "3.31.4",
+    "@tiptap/extension-strike": "3.31.4",
+    "@tiptap/extension-text": "3.31.4",
+    "@tiptap/extension-underline": "3.31.4",
+    "@tiptap/extensions": "3.31.4",
+    "@tiptap/markdown": "3.31.4",
+    "@tiptap/pm": "3.31.4",
+    "@types/react": "19.2.18",
+    "esbuild": "0.28.2",
+    "marked": "17.0.6",
+    "prettier": "3.9.9",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-webview": "13.16.1",
+    "typescript": "6.0.3"
+  }
+}

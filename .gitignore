@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+build/
+.npm-cache/
+
+# Built by scripts/build-web.mjs: shipped in the npm package, not in git
+src/editor-html.ts

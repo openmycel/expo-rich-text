@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "esnext"],
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true
+  },
+  "include": ["."]
+}
